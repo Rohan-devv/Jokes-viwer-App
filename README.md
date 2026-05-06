@@ -1,16 +1,71 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# Jokes Viewer Application
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+A simple React + Vite web app that fetches and displays random jokes from the `Random Jokes API`.
 
-## React Compiler
+## Live Demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+> Add your deployed project URL here once available.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Fetches jokes from the public API: `https://api.freeapi.app/api/v1/public/randomjokes`
+- Displays jokes in a readable card-style layout
+- Allows users to browse through fresh jokes in an engaging interface
+- Responsive design for desktop and mobile
+
+## How it works
+
+1. The app sends a request to the Random Jokes API.
+2. It receives a list of jokes in JSON format.
+3. The UI renders each joke with a clear title and punchline.
+4. Users can scroll through the joke list to browse content.
+
+## Installation
+
+```bash
+cd "Jokes Viewer Application"
+npm install
+```
+
+> This project uses the Vite React template and may also work with `pnpm install` if you prefer.
+
+## Running Locally
+
+```bash
+npm run dev
+```
+
+Then open the local URL shown in the terminal (usually `http://localhost:5173`).
+
+## Build for Production
+
+```bash
+npm run build
+```
+
+## Project Structure
+
+- `src/App.jsx` — main application component and joke fetching logic
+- `src/main.jsx` — React entry point
+- `src/App.css` — component styling for the jokes viewer
+- `public/` — static assets and app manifest
+
+## API
+
+This app uses the public endpoint:
+
+- `https://api.freeapi.app/api/v1/public/randomjokes`
+
+If the API rate limits or changes, the app may require updates to the request handling logic.
+
+## Notes
+
+- Styling can be customized using CSS or Tailwind CSS.
+- The current implementation focuses on a clean and simple browsing experience.
+
+## License
+
+This project is available under the MIT License.
+
